@@ -1,0 +1,12 @@
+n = 0
+n = input()
+print(int(n) * int(1))
+print(int(n) * int(2))
+print(int(n) * int(3))
+print(int(n) * int(4))
+print(int(n) * int(5))
+print(int(n) * int(6))
+print(int(n) * int(7))
+print(int(n) * int(8))
+print(int(n) * int(9))
+print(int(n) * int(10))
