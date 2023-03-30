@@ -1,0 +1,2 @@
+preco= float(input('\033[36mQual o valor do produto?\033[m \n R%: '))
+forma= int(input('\033[36mEscolha a forma de pagamento:\033[m \n [1] À vista em dinheiro ou cheque \n [2] À vista no cartão \n [3] Em duas vezes \n [4] Em tres vezes \n R:'))
