@@ -17,3 +17,4 @@ else:
      print('Em quantas parcelas?')
      parc = int(input('R: '))
      print('O valor total será de R${:.2f}'.format(preco+(preco*0.20*parc)))
+    
