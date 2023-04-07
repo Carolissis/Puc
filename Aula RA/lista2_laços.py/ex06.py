@@ -1,3 +1,6 @@
+# Elaborar um programa que receba o nome completo do usuário, e imprima apenas o
+# primeiro e último nome.
+
 print('\033[34m='*25)
 print('Priemiro e ultimo nome')
 print('='*25,'\033[m')

@@ -1,3 +1,5 @@
+#Nivel de natacao 
+
 ano = int(input('Que ano você nasceu? '))
 idade = 2023 - ano 
 if idade <= 9 :

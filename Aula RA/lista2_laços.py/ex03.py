@@ -1,3 +1,6 @@
+# Criar um jogo de pedra, papel, tesoura entre dois jogadores. Antes de começar o jogo,
+# porém, deve ser escolhido a quantidade de pontos a serem feitos para vencer.
+
 from time import sleep
 
 print('-'*20)

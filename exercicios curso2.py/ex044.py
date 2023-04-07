@@ -1,3 +1,5 @@
+#formas de pagamento 
+
 print('\033[35m' ,"="*5,'Escolha uma forma de pagamento','='*5 , '\033[m')
 preco = float(input('Qual o valor do prouto? R$ '))
 print('Qual a forma de pagamentp?')

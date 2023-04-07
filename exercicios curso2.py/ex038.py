@@ -1,3 +1,5 @@
+#N maior menor ou igual 
+
 x = int(input('Digite o priemiro número: '))
 y = int(input('Digite o segundo número: '))
 

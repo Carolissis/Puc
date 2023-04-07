@@ -1,4 +1,5 @@
 #aprovando emprestimo 
+
 c= int(input('Qual o valor da casa?' ))
 s= int(input('Qual o salário do comprador? '))
 a= int(input('Em quantos anos o financiamento? '))

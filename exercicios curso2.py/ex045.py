@@ -1,3 +1,5 @@
+#Pedra papel tesoura 
+
 from random import randint
 itens= ('Pedra', 'Papel', 'Tesoura')
 c = randint(0, 2) #computador
