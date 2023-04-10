@@ -18,5 +18,5 @@ while resp in 's':
             maior = n 
         if n < menor:
             menor = n
-print('Você digitou {} números e a média foi {}'.format(quant, média))
+print('Você digitou {} números e a média foi {:.2f}'.format(quant, média))
 print('O maior valor foi {} e o menor foi {}'.format(maior, menor ))
