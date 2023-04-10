@@ -11,7 +11,7 @@ for c in range(11):
     CPF.append(int(cpf[c]))
 
 soma = 0 
-for c in range(0:9):
+for c in range(0,9):
     soma+= CPF[c]*(10-c)
 
 x = (soma*10)
@@ -27,7 +27,7 @@ else:
 print('O resultado da divisão acima é {} e o resto é {}'.format(soma, resto))
 
 soma2= 0
-for i in range(0:9):
+for i in range(0,9):
     soma2+= CPF[i]*(11-i)
 
 y= (soma2*10)
