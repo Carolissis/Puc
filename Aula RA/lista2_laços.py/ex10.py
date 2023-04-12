@@ -12,3 +12,4 @@ data2 = date(int(data2_str[6:]), int(data2_str[3:5]), int(data2_str[:2]))
 dias = abs((data2 - data1).days)
 
 print("A quantidade de dias entre as duas datas é:", dias)
+ 
