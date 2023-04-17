@@ -5,13 +5,15 @@ menor = 0
 for c in range(1, 6):
     num = int(input(f'Digite o {c}º número: '))
     
-    if c == 0:
-        menor = maior = num
-        lista.insert(0, num)
-
+    if c == 1 or num > lista[-1]:
+        lista.append(num)
+        print('Adicionado ao final da lista...')
     else:
-        if num > maior:
-            lista.insert(-1, num)
-        if num < menor:
-            lista.insert(0, num)
+        pos = 0
+        while pos < len(lista):
+            if num <= lista[pos]:
+                lista.insert(pos , num)
+                print(f'Adicionado na posicao {pos} da lista...')
+                break 
+            pos +=1
 print(lista)

@@ -46,3 +46,48 @@ def lista():
     valores.sort()                      # Organiza em ordem a 
     valores.sort(reverse=True)          # Coloca de traz para frente 
     len(valores)                        # Conta quantos itens 
+
+def lista2():
+    # Variaveis compostas 
+    pessoas = [['pedro', 25], ['maria', 19], ['joao', 32]]
+
+    def teste1():
+        teste = list()
+        teste.append('Carol')
+        teste.append(18)
+        galera = list()
+        galera.append(teste[:])             #Colocar [:] para nao juntar as listas e apenas colar 
+        teste[0] = ('Rica')
+        teste[1] = 22
+        galera.append(teste[:])
+        print(galera)                       # output: [['Carol ',18] ,['Rica' ,22]]
+
+    def teste2():
+        galera = [['Joao', 19], ['Ana', 33], ['Carol', 18]]
+        print(galera[2])                    # Carol 18
+        print(galera[2][0])                 # Carol
+
+        for p in galera:
+            print(f'p[0] tem {p[1]} anos de idade')
+
+    def teste3():
+        gal = list()
+        dado = list()
+        totmai = totmen = 0
+
+        for c in range(0,3):
+            dado.append(str(input('Nome: ')))
+            dado.append(int(input('Idade: ')))
+            gal.append(dado[:])
+            dado.clear()
+
+        for p in gal:
+            if p[1]>= 21:
+                print(f'{p[0]} é maior de idade.')
+                totmai += 1
+            else:
+                print(f'{p[0]} é menor de idade.')
+                totmen +=1 
+
+        print(f'Tem {totmai} maiores e {totmen} menores')
+
