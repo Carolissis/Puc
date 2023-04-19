@@ -4,37 +4,38 @@
 #  A senha deve ter pelo menos um símbolo. Ex: * ! # $ % & + - / : ; = ? @ \ |
 #  A senha deve ter pelo menos um número.
 
-from random import randint, choice
-
-num = [0,1,2,3,4,5,6,7,8,9]
-alphaP = ['a', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-alphaG = ['A', 'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T', 'U','V','W','X','Y','Z']
 eps = ['*', '!', '#', '$', '%', '&', '+', '-', '/', ':', ';', '=', '?', '@','|']
-paw = [ ]
-n = 0
-ap = 0
-ag = 0
-e = 0
+tentativas_maximas = 3
 
-
-while True:
-    paw.append(str(input('Digite sua senha, ela deve conter:\nDe 8 a 15 caraceres\nPelo menos uma letra maiuscula e maiuscula\nUma caractere especial\nSenha: ')))
-    x = len(paw)
-    if 8 <= x <= 15:   
-        for c in range(len(paw)):
-            if paw[c] in num:
-                n+=1
-            if paw[c] in alphaP:
-                ap+=1 
-            if paw[c] in alphaG:
-                ag+=1
-            if paw[c] in eps:
-                e+=1 
-        if n >= 1 and c >= 1 and ag >= 1 and ap >= 1:
-            print('Sua senha é valida')
-            print(f'Sua senha é: {paw}')
-            print(f'Sua senha contem {len(paw)} sendo {ap} letras minusculas, {ag} letras maiusculas, {num} números e {e} caracteres especiais')
-            break 
+for tentativa in range(1, tentativas_maximas+1):
+    senha = (input('Digite sua senha, ela deve conter:\nDe 8 a 15 caraceres\nPelo menos uma letra maiuscula e maiuscula\nUma caractere especial\nSenha: '))
+    n = ap = ag = e = 0
+    for c in senha:
+        if c.isdigit():
+            n+=1
+        if c.islower():
+            ap+=1 
+        if c.isupper():
+            ag+=1
+        if c in eps:
+            e+=1 
+    if n >= 1 and e >= 1 and ag >= 1 and ap >= 1 and 8 <= len(senha) <= 15:
+        print('Sua senha é valida')
+        print(f'Sua senha é: {senha}')
+        print(f'Sua senha contem {len(senha)} sendo {ap} letras minusculas, {ag} letras maiusculas, {num} números e {e} caracteres especiais')
+        break
     else: 
         print('Esta faltando algum requisito...')
+        if n < 1:
+            print('- Pelo menos um número.')
+        if ag < 1:
+            print('- Pelo menos uma letra maiúscula.')
+        if e < 1:
+            print('- Pelo menos um caractere especial.')
+        if len(senha) < 8 or len(senha) > 15:
+            print('- De 8 a 15 caracteres.')
+        if tentativa == tentativas_maximas:
+            print('Você atingiu o número máximo de tentativas.')
+        else:
+            print(f'Você tem mais {tentativas_maximas - tentativa} tentativa(s) restante(s).')
 
