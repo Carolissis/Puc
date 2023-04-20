@@ -1,13 +1,12 @@
 # Perguntar os nomes e peso, falar quantas pessoas foram cadastradas 
 # uma lista da/das pessoas mais pesados e peso
 # uma lista da/das pessoas mais leves e peso
-
 r = 's'
-np = list()
 geral = list()
 pmai = pmen = 0 
 
 while r == 's':
+    np = list()
     np.append(str(input('Nome: ')))
     np.append(float(input('Peso: ')))
     if len(geral) == 0:
@@ -17,7 +16,7 @@ while r == 's':
             pmai = np[1]
         if np[1] < pmen:
             pmen = np[1]
-    geral.append(geral[:])
+    geral.append(np[:])
     r = str(input('Deseja continuar? [S/N] '))
 
 print(f'{len(geral)} pessoas foram cadastradas.')
@@ -25,7 +24,7 @@ print(f'O maior peso foi de {pmai:.2f}Kg.', end='')
 for p in geral:
     if p[1] == pmai:
         print(f'[{p[0]}]', end='')    
-print(f'O menor peso foi de {pmen:.2f}Kg.', end= '')
+print(f' e o menor peso foi de {pmen:.2f}Kg.', end= '')
 for p in geral:
     if p[1] == pmen:
         print(f'[{p[0]}]', end='')
