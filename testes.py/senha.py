@@ -22,7 +22,7 @@ for tentativa in range(1, tentativas_maximas+1):
     if n >= 1 and e >= 1 and ag >= 1 and ap >= 1 and 8 <= len(senha) <= 15:
         print('Sua senha é valida')
         print(f'Sua senha é: {senha}')
-        print(f'Sua senha contem {len(senha)} sendo {ap} letras minusculas, {ag} letras maiusculas, {num} números e {e} caracteres especiais')
+        print(f'Sua senha contem {len(senha)} caracteres, sendo {ap} letras minusculas, {ag} letras maiusculas, {n} números e {e} caracteres especiais')
         break
     else: 
         print('Esta faltando algum requisito...')
