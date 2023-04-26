@@ -11,5 +11,6 @@ while True:
 for n in lista:
     soma += n
 
+lista.sort()
 print(f'Sua lista é {lista}')
 print(f'A média dessee valores é: {soma / len(lista):.2f}')
