@@ -30,14 +30,14 @@ if opcao == 1:
 if opcao == 2:
     quantsp = int(input('Fazer média de quantas provas?\nR: '))
     media   = float(input('Qual a média para ser aprovado?\nR: '))
-    p      = 0      # Peso
-    soma    = 0     # Soma das notas com peso  
-    for p in range(quantsp):
-        nota = float(input(f'Valor da {p+1}º nota: '))
-        peso = int(input(f'Peso da {p+1}º nota: '))
-        p   += peso
+    p = 0      # Peso
+    soma = 0     # Soma das notas com peso  
+    for c in range(quantsp):
+        nota = float(input(f'Valor da {c+1}º nota: '))
+        peso = int(input(f'Peso da {c+1}º nota: '))
+        p += peso
         soma+= (nota * peso)
-    mp = soma / peso
+    mp = soma / p
     if mp >= media:
         print(f'Parabens! Você foi aprovado com média {mp:.2f}')
     else: 
