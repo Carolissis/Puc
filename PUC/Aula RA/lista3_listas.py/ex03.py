@@ -15,11 +15,12 @@ for t in range(12):
     soma += temp
 
 media = soma / 12
-mai = list
-for t in temperatura:
-    if t > media:
-        mai.append(meses[t])
+mai = list()
+for t in range(12):
+    if temperatura[t] > media:
+        mai.append(t)
 
-print(f'A temperatura anual média é de {media} e os meses que estão acima dessa média são:')
-print(mai)
+print(f'A temperatura anual média é de {media:.2f} e os meses que estão acima dessa média são:')
+for m in mai:
+    print(meses[m])
 
