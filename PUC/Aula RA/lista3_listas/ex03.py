@@ -1,3 +1,4 @@
+#Faça um Programa que leia 4 notas, mostre as notas e a média na tela
 notas = []
 soma = 0
 for n in range(4):
