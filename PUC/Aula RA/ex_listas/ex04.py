@@ -20,4 +20,5 @@ for x in range(3):
         m12[x][y] = m1[x][y] + m2[x][y]
 
 print('A soma das matrizes é igual a:')
-for c in range 
+for c in range(3):
+    print(m12[c])
