@@ -33,8 +33,9 @@ for c in range(6):
         melhor = c
 
 melhorporc = 0
+tot = len(opc)
 for c in org:
-    porc = votos[c-1]/len(opc)*100
+    porc = votos[c-1]/tot*100
     porcentagem.append(porc)
     if porc > melhorporc:
         melhorporc = porc
