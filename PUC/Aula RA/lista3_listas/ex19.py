@@ -1,6 +1,6 @@
-marcas = ['Windowns', 'Unix', 'Linux','Netware', 'Mac OS', 'Outro']
+marcas = ['Windows', 'Unix', 'Linux','Netware', 'Mac OS', 'Outro']
 opc = []
-cont = 1
+cont = 0
 votos = [0]*6
 porcentagem = []
 
@@ -8,15 +8,14 @@ print('Qual o melhor Sistema Operacional para uso em servidores?')
 for i,m in enumerate(marcas):
     print(f'{i+1}- {m}')
 while True:
-    opcao = int(input(f'Voto {cont}(0=FIm): '))
+    opcao = int(input(f'Voto {cont+1}(0=FIm): '))
     if opcao == 0:
-        cont -= 1
         break
-    elif 1 > opcao or opcao > 6:
-        print('Número inválido')
     elif 1<= opcao <=6:
         opc.append(opcao)
         cont += 1
+    else:
+        print('Número inválido')
 org = list(set(opc))
 org.sort()
 
@@ -35,7 +34,7 @@ for c in range(6):
 
 melhorporc = 0
 for c in org:
-    porc = float(f'{votos[c-1]/len(opc)*100:1f}')
+    porc = votos[c-1]/len(opc)*100
     porcentagem.append(porc)
     if porc > melhorporc:
         melhorporc = porc
