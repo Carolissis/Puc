@@ -1,0 +1,48 @@
+marcas = ['Windowns', 'Unix', 'Linux','Netware', 'Mac OS', 'Outro']
+opc = []
+cont = 1
+votos = [0]*6
+porcentagem = []
+
+print('Qual o melhor Sistema Operacional para uso em servidores?')
+for i,m in enumerate(marcas):
+    print(f'{i+1}- {m}')
+while True:
+    opcao = int(input(f'Voto {cont}(0=FIm): '))
+    if opcao == 0:
+        cont -= 1
+        break
+    elif 1 > opcao or opcao > 6:
+        print('Número inválido')
+    elif 1<= opcao <=6:
+        opc.append(opcao)
+        cont += 1
+org = list(set(opc))
+org.sort()
+
+print('-'*35)
+print('{:<20}{:>6}{:>6}'.format('Sistema Operacional','Votos','%'))
+print('{:<20}{:>6}{:>9}'.format('-'*18,'-'*5,'-'*4))
+
+maisvot = 0
+melhor = 0
+for c in range(6):
+    qtd = opc.count(c+1)
+    votos[c] = qtd
+    if qtd > maisvot:
+        maisvot = qtd
+        melhor = c
+
+melhorporc = 0
+for c in org:
+    porc = float(f'{votos[c-1]/len(opc)*100:1f}')
+    porcentagem.append(porc)
+    if porc > melhorporc:
+        melhorporc = porc
+
+for c in range(6):
+    print(f'{marcas[c]:<20}{votos[c]:>6}{porcentagem[c]:>9.2f}')
+print('-'*35)
+print('{:<20}{:>6}'.format('Total', cont))
+print()
+print(f'O sistema mais votado foi {marcas[melhor]} com {maisvot} votos, equivalente a {melhorporc:.2f}% dos votos')
