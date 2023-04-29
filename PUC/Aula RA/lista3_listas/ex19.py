@@ -16,6 +16,7 @@ while True:
         cont += 1
     else:
         print('Número inválido')
+
 org = list(set(opc))
 org.sort()
 
@@ -32,17 +33,14 @@ for c in range(6):
         maisvot = qtd
         melhor = c
 
-melhorporc = 0
 tot = len(opc)
 for c in org:
     porc = votos[c-1]/tot*100
     porcentagem.append(porc)
-    if porc > melhorporc:
-        melhorporc = porc
 
 for c in range(6):
     print(f'{marcas[c]:<20}{votos[c]:>6}{porcentagem[c]:>9.2f}')
 print('-'*35)
 print('{:<20}{:>6}'.format('Total', cont))
 print()
-print(f'O sistema mais votado foi {marcas[melhor]} com {maisvot} votos, equivalente a {melhorporc:.2f}% dos votos')
+print(f'O sistema mais votado foi {marcas[melhor]} com {maisvot} votos, equivalente a {max(porcentagem):.2f}% dos votos')
