@@ -1,3 +1,5 @@
+# AULA 20
+
 def lin():
     print('-'*20)
 # lin()
@@ -47,3 +49,26 @@ def soma(* valores):
 
 soma(5, 2)
 soma(1,4,5)
+
+# AULA 21
+
+def soma(a=0, b=0, c=0):
+    s = a + b + c
+    return s
+
+r1 = soma(1,12,3)
+r2 = soma(5,7)
+r3 = soma(9)
+
+print(f'Os resultados das somas foram {r1}, {r2}, {r3}')
+
+def fatorial(num=1):
+    f = 1
+    for c in range(num,0,-1):
+        f *= c
+    return f
+    
+f1 = fatorial(5)
+f2 = fatorial(4)
+f3 = fatorial()
+print(f'Os fatoriais são {f1}, {f2}, {f3}')
