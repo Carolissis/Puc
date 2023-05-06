@@ -14,4 +14,4 @@ def quadrado(n):
     return n*n
 
 def raiz(n):
-    return n*1/2
+    return n ** (1/2)
