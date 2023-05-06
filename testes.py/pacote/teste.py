@@ -1,6 +1,6 @@
-from oi.maior import maior
-from oi.media import media
+from oi.pastamaior import uteismaior
+from oi.pastamedia import uteismedia
 
 notas= [10, 8, 7]
-print(maior.maior(notas))
-print(media.media(notas))
+print(uteismaior.maior(notas))
+print(uteismedia.media(notas))
