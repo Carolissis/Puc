@@ -1,5 +1,5 @@
-from teste.interface import teste
-from teste.arquivo import arq
+from interface import teste
+from arquivo import arq
 
 arqv = 'Pessoas adicionadas.txt'
 if not arq.arquivoExiste(arqv):
@@ -16,5 +16,6 @@ while True:
         arq.cadastrar(arqv, nome, idade)
     elif resposta == 3:
         teste.cabecalho('Saindo do sistema... Até logo')
+        break
     else:
         print('\033[31mERRO! Opção inválida\033[m')
