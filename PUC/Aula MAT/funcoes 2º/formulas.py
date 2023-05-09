@@ -13,19 +13,7 @@ def bhaskara(a, b, c):
         x2 = (-b - math.sqrt(delta)) / (2 * a)
         return x1, x2
 
-a = float(input("Digite o coeficiente a: "))
-b = float(input("Digite o coeficiente b: "))
-c = float(input("Digite o coeficiente c: "))
-
-raizes = bhaskara(a, b, c)
-
-if raizes is None:
-    print("A equação não possui raízes reais.")
-else:
-    x1, x2 = raizes
-    print(f"Raízes da equação: x1 = {x1} e x2 = {x2}")
-
-def calcula_vertice(a, b, c):
+def vertice(a, b, c):
     # Calcular o valor de h (coordenada x do vértice)
     h = -b / (2 * a)
 
@@ -35,10 +23,4 @@ def calcula_vertice(a, b, c):
     # Retornar o vértice como uma tupla (h, k)
     return (h, k)
 
-# Exemplo de uso da função
-a = 3
-b = -1
-c = -2
-vertice = calcula_vertice(a, b, c)
-print(f"O vértice da função quadrática é: {vertice}")
 
