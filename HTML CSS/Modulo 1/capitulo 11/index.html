@@ -10,7 +10,8 @@
     <h1>Imagem dinamica</h1>
     <p>Tente abrir esse site me varios dispositivos diferentes ou simplesmente aumente ou diminua o tamnho do seu navegador </p>
     <picture>
-        <source>
+        <source media="(max-width: 750px )" srcset="imagens/img_p.jpeg" type="image/jepg">
+        <source media="(max-width: 1050px)" srcset="imagens/img_m.jpeg" type="image/jpeg">
         <img src="imagens/img_g.jpeg" alt="Imagem felxivel">
     </picture>
 </body>
