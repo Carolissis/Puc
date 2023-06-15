@@ -9,7 +9,7 @@ import numpy as np
 
 # plt.plot(vetorX,vetorY, label = 'Função y= 2x + 1', color = 'g')
 
-# plt.show()
+#plt.show()
 def f(x):
     y = 2*x +1
     return y
