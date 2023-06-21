@@ -45,6 +45,7 @@ def funcao_exponencial():
 
         elif opcao == 3:
             print(grafico(a, b))
+            
         
         elif opcao == 4:
             break 
