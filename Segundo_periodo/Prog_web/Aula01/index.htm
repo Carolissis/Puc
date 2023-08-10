@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Meu site querido</title>
+        <style>
+            body {
+                font-size: 25px;
+            }
+            .textbox {
+                width: 600px;
+                font-size: 25px;
+            }
+            .radios {
+                width: 18px;
+                height: 18px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#009900" style="margin: 20px;" onload="form1.txtName.focus()">
+        <form name="form1" id="form1" action="" enctype="text/plain" method="get" onsubmit="return cmdSendOnClickWithId()">
+            <b>Nome:</b> <input type="text" name="txtName" id="txtName" class="textbox"/><br>
+            <b>Sexo:</b><br><input type="radio" value="1" name="optSex" id="optM" class="radios"> Masculino<br>
+            <input type="radio" value="2" name="optSex" id="optF" class="radios"> Feminino<br>
+            <input type="radio" value="3" name="optSex" id="optO" class="radios"> Outros<br><br>
+            <b>Fumante?</b> <input type="checkbox" value="1" name="chkSmoker" id="chkSmoker" class="radios"><br><br>
+            <input type="submit" name="cmdSend" id="cmdSend" value="Enviar"/><br><br>
+        </form>
+    </body>
+    <script>
+        function cmdSendOnClick() {
+            if (form1.txtName.value == '') {
+                alert('Nome: campo não pode ser vazio.');
+                form1.txtName.focus();
+            }
+            else if (form1.optSex.value == '') {
+                alert('Sexo: escolha obrigatória.');
+            }
+            else {
+                form1.submit();
+            }
+        }
+
+        function cmdSendOnClickWithId() {
+            let myForm = document.getElementById('form1');
+            let txtName = document.getElementById('txtName');
+            let optM = document.getElementById('optM');
+            let optF = document.getElementById('optF');
+            let optO = document.getElementById('optO');
+
+            if (txtName.value == '') {
+                alert('Nome: campo não pode ser vazio.');
+                txtName.focus();
+                return false;
+            }
+            else if (!optM.checked && !optF.checked && !optO.checked) {
+                alert('Sexo: escolha obrigatória.');
+                return false;
+            }
+            else {
+                myForm.submit();
+            }
+        }
+    </script>
+</html>
