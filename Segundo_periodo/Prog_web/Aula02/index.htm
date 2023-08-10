@@ -45,7 +45,17 @@
     </body>
     <script>
         function cmdSendOnClick() {
-            
+            let text = form1.txtText.value;
+            if (isCEP(text)){
+                alert('Validacao Ok')
+            }
+            else{
+                alert('Ihh, deu errado')
+            }
+        }
+        function isCEP(text){
+            const re = /^\d{2}\.?\d{3}-?\d{3}$/;
+            return re.test(text);
         }
     </script>
 </html>
