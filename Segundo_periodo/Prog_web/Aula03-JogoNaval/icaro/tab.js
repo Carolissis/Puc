@@ -82,11 +82,6 @@ function verifStatus(x){
             pontoht.innerText = pontos
         }
 
-
-
-
-
-
     } else {
         count += 1
         peça.style.backgroundImage = 'url(Aula03-JogoNaval/images/barco.png)';

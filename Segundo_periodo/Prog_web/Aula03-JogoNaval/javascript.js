@@ -44,8 +44,45 @@ function verifStatus(x){
     var pontoht = window.document.getElementById('pontos')
     var vidaht = window.document.getElementById('vidas')
 
-    if (barco[x-1]==0){
+    if (barco[x-1] == 0){
         peca.style.backgroundImage = 'url (img/agua.png)';
-        
+        peca.style.backgroundSize = 'cover';
+
+        vidas -= 1;
+        vidaht.innerText = vidas
+
+        if (vidas <= 0){
+            gameover();
+        }
+
+        if(pontos > 0){
+            pontos -= 1;
+            pontoht.innerText = pontos 
+        }
+    } else {
+        count +=1
+        peca.style.backgroundImage = 'url (img/barco.png)';
+        peca.style.backgroundSize = 'cover';
+
+        if (vidas < vidamax) {
+            vidas += 1;
+            vidaht += 1;
+            vidaht.innerText = vidas
+        }
+        pontos += 1
+        pontoht.innerText = pontos
+        if(count == 3){
+            win()
+        }
     }
+}
+
+function gameover() {
+    pode = false;
+    alert('Você perdeu\nPontos: '+ pontos)
+}
+
+function win(){
+    pode = false;
+    alert('Você ganhou\nPontos: '+ pontos )
 }
