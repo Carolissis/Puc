@@ -1,30 +1,51 @@
-function tabela() {
-    for(i=0; i<5; i++){
-        document.write("<tr>")
-        for(j=0; j<8; j++) {
-            document.write(`<td width=50 onclick='shipOnClick(${i}, ${j})'><img id='ship${i}${j}' src='img/capa.png'></td>`)
-        }
+var barco = [];
+var vidas;
+var pontos;
+var pode;
+var count;
+var vidamax = 5;
+
+function aleat(min, max){
+    var aleat = Math.floor(Math.random() * (max - min + 1)) + min;
+    return aleat
+}
+
+function newgame(){
+    for(var i = 0; i < 40; i ++){
+        barco.push(0);
     }
 }
-function shipOnClick(i,j){
-    alert(`${i}${j}`);
-    // i1= Math.floor(Math.random() * 5);
-    // j1= Math.floor(Math.random() * 8);
-    // i2= Math.floor(Math.random() * 5);
-    // j2= Math.floor(Math.random() * 8);
+
+sorteados = []
+
+do {
+    var pos = aleat(0, 39);
+    if (sorteados.includes(pos)){
+        continue;
+    } else {
+        barco[pos] = 1;
+        sorteados.push(pos);
+    }
+} while (sorteados.length < 8)
+
+vidas = vidamax;
+pontos = 0;
+pode = true;
+
+function clicar(id) {
+    var peca = window.document.getElementById(id);
+    if(pode == true){
+        verifStatus(id)
+    }
 }
-function ship(){
-    const type = ships[indX][indY];
-    ship.src = getImage(type);
+
+function verifStatus(x){
+    var peca = window.document.getElementById(x)
+    var pontoht = window.document.getElementById('pontos')
+    var vidaht = window.document.getElementById('vidas')
+
+    if (barco[x-1]==0){
+        peca.style.backgroundImage = 'url (img/agua.png)';
+        
+    }
 }
-function score(){
-    const scoreboard = document.getElementsById("divScoreboard");
-    scoreboard.innerHTML = "Pontos: " + points + " - Vidas: " + life;
-}
-let map = [
-    [0,0,0,1,2,0,0,2],
-    [1,0,0,0,0,2,0,0],
-    [0,0,2,1,0,1,0,0],
-    [0,2,1,2,0,0,0,1],
-    [2,0,0,0,0,1,2,0]
-]
