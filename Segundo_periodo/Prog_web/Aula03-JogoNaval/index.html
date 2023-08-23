@@ -11,6 +11,10 @@
 </head>
 <body onload="newgame()">
     <h1>Batalha Naval!!</h1>
+    <div class="informacoes">
+        <p>Pontos: <span id="pontos">0</span></p>
+        <p>Vidas: <span id="vidas">8</span></p>
+    </div>
     <main class="tabuleiro">
         <div class="linha" id="linha01">
             <div class="peca p1" id="1" onclick="clicar(this.id)"></div>
@@ -64,9 +68,5 @@
         </div>
     </main>
 
-    <div class="informacoes">
-        <p>Pontos: <span id="pontos"></span></p>
-        <p>Vidas: <span id="vidas">5</span></p>
-    </div>
 </body>
 </html>

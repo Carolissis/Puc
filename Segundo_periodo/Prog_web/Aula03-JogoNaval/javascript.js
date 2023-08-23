@@ -3,7 +3,7 @@ var vidas;
 var pontos;
 var pode;
 var count;
-var vidamax = 5;
+var vidamax = 8;
 
 function aleat(min, max){
     var aleat = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -14,23 +14,23 @@ function newgame(){
     for(var i = 0; i < 40; i ++){
         barco.push(0);
     }
+    
+    sorteados = []
+    
+    do {
+        var pos = aleat(0, 39);
+        if (sorteados.includes(pos)){
+            continue;
+        } else {
+            barco[pos] = 1;
+            sorteados.push(pos);
+        }
+    } while (sorteados.length < 8)
+    
+    vidas = vidamax;
+    pontos = 0;
+    pode = true;
 }
-
-sorteados = []
-
-do {
-    var pos = aleat(0, 39);
-    if (sorteados.includes(pos)){
-        continue;
-    } else {
-        barco[pos] = 1;
-        sorteados.push(pos);
-    }
-} while (sorteados.length < 8)
-
-vidas = vidamax;
-pontos = 0;
-pode = true;
 
 function clicar(id) {
     var peca = window.document.getElementById(id);
@@ -45,7 +45,7 @@ function verifStatus(x){
     var vidaht = window.document.getElementById('vidas')
 
     if (barco[x-1] == 0){
-        peca.style.backgroundImage = 'url (img/agua.png)';
+        peca.style.backgroundImage = 'url(img/agua.png)';
         peca.style.backgroundSize = 'cover';
 
         vidas -= 1;
@@ -61,12 +61,12 @@ function verifStatus(x){
         }
     } else {
         count +=1
-        peca.style.backgroundImage = 'url (img/barco.png)';
+        peca.style.backgroundImage = 'url(img/barco.png)';
         peca.style.backgroundSize = 'cover';
 
         if (vidas < vidamax) {
             vidas += 1;
-            vidaht += 1;
+            // vidaht += 1;
             vidaht.innerText = vidas
         }
         pontos += 1
