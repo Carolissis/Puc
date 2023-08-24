@@ -10,15 +10,25 @@ function aleat(min, max){
     return aleat
 }
 
+function tabuleiro(){
+    for(var i = 0; i < 8; i++){
+        document.write(`<div class="linha" id="linha0${i + 1}">`)
+        for(var j = 0; j < 12; j++){
+            document.write(`<div>class="peca p${j + 1}" id="" onclick="clicar(this.id)</div>`)
+        }
+        document.write(`</div>`)
+    }
+}
+
 function newgame(){
-    for(var i = 0; i < 40; i ++){
+    for(var i = 0; i < 96; i ++){
         barco.push(0);
     }
     
     sorteados = []
     
     do {
-        var pos = aleat(0, 39);
+        var pos = aleat(0, 95);
         if (sorteados.includes(pos)){
             continue;
         } else {
