@@ -1,5 +1,24 @@
+*{
+    /* background-color: aqua; */
+    
+}
+:root {
+    --corBotao: rgb(58, 162, 157);
+}
+body{
+    background-image: linear-gradient(100rad, rgb(66, 218, 210), rgb(255, 255, 255));
+}
 .menu{
     text-align: center;
+    
+}
+.qntdVida{
+    display: inline-block;
+    background-color: var(--corBotao);
+    padding: 30px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 30px;
 }
 
 .button-link {
@@ -8,11 +27,13 @@
     text-align: center;
     text-decoration: none;
     color: white;
-    background-color: #007BFF;
-    border: 1px solid #007BFF;
+    border-radius: 10px;
+    background-color:var(--corBotao);
+    border: 1px solid var(--corBotao);
     cursor: pointer;
 }
 
 .button-link:hover {
-    background-color: #0056b3;
+    background-color: #adb8c4;
+    color: black;
 }
