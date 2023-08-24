@@ -8,18 +8,19 @@
     <script src="script.js"></script>
     <title>Home BatNaval</title>
 </head>
-<body>
-    <div class="menu">
-        <div class="qntdVida">
-            <input type="radio" name="lives" value="3" checked>3 Vidas
-            <input type="radio" name="lives" value="5">5 Vidas
-            <input type="radio" name="lives" value="7">7 Vidas
+    <body>
+        <div class="centralizarMenu">
+            <div class="menu">
+                <div class="qntdVida">
+                    <input type="radio" name="lives" value="3" checked>3 Vidas
+                    <input type="radio" name="lives" value="5">5 Vidas
+                    <input type="radio" name="lives" value="7">7 Vidas
+                </div>
+                <div class="mens">
+                    <input type="checkbox" id="toggleMessages" onclick="checkCheckboxState()">Exibir Mensagens
+                </div>
+                <a href="index.html" id="startGame" class="button-link">Iniciar Jogo</a>
+            </div>
         </div>
-        <div id="messages"></div>
-        <div>
-            <input type="checkbox" id="toggleMessages">Exibir Mensagens
-        </div>
-        <a href="index.html" id="startGame" class="button-link">Iniciar Jogo</a>
-    </div>
-</body>
+    </body>
 </html>
