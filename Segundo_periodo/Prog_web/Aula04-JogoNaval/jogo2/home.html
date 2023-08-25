@@ -12,14 +12,14 @@
         <div class="centralizarMenu">
             <div class="menu">
                 <div class="qntdVida">
-                    <input type="radio" name="lives" value="3" checked>3 Vidas
-                    <input type="radio" name="lives" value="5">5 Vidas
-                    <input type="radio" name="lives" value="7">7 Vidas
+                    <input type="radio" name="lives" value="3" checked onclick="setarVidas(3)">3 Vidas
+                    <input type="radio" name="lives" value="5" onclick="setarVidas(5)">5 Vidas
+                    <input type="radio" name="lives" value="7" onclick="setarVidas(7)">7 Vidas
                 </div>
                 <div class="mens">
                     <input type="checkbox" id="toggleMessages" onclick="checkCheckboxState()">Exibir Mensagens
                 </div>
-                <a href="index.html" id="startGame" class="button-link" onclick="setarVidas">Iniciar Jogo</a>
+                <button id="startGame" class="button-link" onclick="qualquer">Iniciar Jogo</button>
             </div>
         </div>
     </body>

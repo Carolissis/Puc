@@ -1,5 +1,5 @@
 :root {
-    --corBotao: rgb(90, 180, 175);
+    --corBotao: rgb(12, 57, 55);
 }
 
 
@@ -9,7 +9,7 @@
 }
 body{
     height: 100%;
-    background-image: linear-gradient(to left, rgb(66, 218, 210), rgb(255, 255, 255)); 
+    background-image: linear-gradient(to left, rgb(6, 61, 58), rgb(167, 159, 142)); 
 }
 
 .centralizarMenu{

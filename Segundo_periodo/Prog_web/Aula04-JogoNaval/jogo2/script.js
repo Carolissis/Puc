@@ -9,9 +9,14 @@ const ships = [
     [2,2,2,2,2,2,2,2,2,2,2,2],
     [3,3,3,3,3,3,3,3,3,3,3,3]];
     
-let life;
+let life = 3;
 let points;
 let endGame;
+
+function setarVidas(number){
+    let life = number
+    console.log(number)
+}
 
 
 function tabela(){
@@ -54,7 +59,7 @@ function shipOnClick(indX, indY) {
     const ship = document.getElementById(`ship${indX}${indY}`);
     const type = ships[indX][indY];
     ship.src = getImage(type);
-    //ship.src = mens(type)
+    ship.src = mens(type)
     update_scoreboard(type);
 }
 
@@ -81,20 +86,25 @@ function getImage(type) {
 function mens(type) {
     switch (type) {
         case 0:
-            document.write(`<p>Deu água</p>`);
+            return(`<img src="images/agua.jpg" alt="Agua" onclick="changeText('Deu água')">`);
             break;
         case 1:
-            document.write(`<p>Você destruiu o submario!!</p>`);
+            return(`<img src="images/submarino.jpg" alt="Sub" onclick="changeText('Você destruiu o navio!!')">`);
             break;
         case 2:
-            document.write(`<p>Você DETONOU o porta aviões :o</p>`);
+            return(`<img src="images/porta_avioes.jpg" alt="aviao" onclick="changeText('Você DETONOU o porta aviões :O')">`);
             break;
         case 3:
-            document.write(`<p>BOA! Afundou o navio inimigo!</p>`);
+            return(`<img src="images/navio_de_guerra.jpg" alt="navio" onclick="changeText('Você afundou o navio!!')">`);
             break;
     }
     
     return "images/back.jpg";
+}
+
+function changeText(description) {
+    const div = document.getElementById('imageDescription');
+    div.textContent = description;
 }
 
 function update_scoreboard(type) {
@@ -124,7 +134,7 @@ resetGame();
 function checkCheckboxState() {
     const checkbox = document.getElementById('myCheckbox');
 
-    if (checkbox.checked) {
+    if (checkbox.check) {
         alert('A checkbox está marcada!');
     } else {
         alert('A checkbox não está marcada!');

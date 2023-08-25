@@ -1,5 +1,9 @@
 @charset "UTF-8";
-
+*{
+    background-color: rgb(6, 61, 58);
+    color: aliceblue;
+    font-size: 20px;
+}
 table {
     width: 960px;
     border: 30px;
