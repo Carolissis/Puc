@@ -1,34 +1,31 @@
-#containerJogo{
-  background-image: url('./img/chao.JPG');
-  height: 500px;
-  width: 500px;
-  background-repeat: no-repeat;
-  display: flex;
-}
-
-#containerJogoComSetas{
-  /* display: flex;
-  justify-content: space-between;
-  align-items: ; */
+#containerJogoComFlexas{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#containerJogo{
+  background-image: url(img/chao.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid rgb(61, 7, 7);
+  width: 350px;
+  height: 350px;
+}
+
+.containerFlexasEJogo{
+  display: flex;
+  align-items: center;
+}
+
+.flexa{
+  width: 200px;
+  height: 200px;
+  font-size: 200px;
+  display: flex;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  border: 0px solid transparent;
+  color: rgb(85, 131, 15);
 }
 
-.botaoCima{
-    width: 70px;
-    height: 50px;
-    
-}
-.botaoLado{
-    width: 50px;
-    height: 70px;
-}
-
-.centro{
-    display: flex;
-    justify-content:center ;
-    align-items: center;
-}

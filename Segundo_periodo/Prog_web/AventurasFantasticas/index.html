@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Aventuras Fantasticas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+  <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+  <title>Mundo De Aventuras</title>
 </head>
 <body>
-    <div id="containerJogoComSetas">
-        <div class="seta" id="setaNorte">
-            <button class="botaoCima" onclick="mover('Norte')">^</button> 
-        </div>
-
-        <div class="centro">
-            <div class="seta" id="setaOeste">
-                <button class="botaoLado" onclick="mover('Oeste')"><</button>
-            </div>
-
-            <div id="containerJogo">
-                
-
-            </div>
-            
-            <div class="seta" id="setaLeste">
-                <button class="botaoLado" onclick="mover('Leste')">></button>
-            </div >
-        </div>
-
-        <div class="seta" id="setaSul">
-            <button class="botaoCima" onclick="mover('Sul')">v</button>
-        </div>
-
-
-        </div>
+  <div id="containerJogoComFlexas">
+    <div class="containerFlexa">
+      <button class="flexa" onclick="mover('Norte')">
+        ^
+      </button>
     </div>
+    <div class="containerFlexasEJogo">
+      <div class="containerFlexa">
+        <button class="flexa" onclick="mover('Oeste')">
+          <
+        </button>
+      </div>
+
+      <div id="containerJogo"></div>
+
+      <div class="containerFlexa">
+        <button class="flexa" onclick="mover('Leste')">
+          >
+        </button>
+      </div>
+    </div>
+
+    <div class="containerFlexa">
+      <button class="flexa" onclick="mover('Sul')">
+        v
+      </button>
+    </div>
+  </div>
+
 </body>
 </html>
