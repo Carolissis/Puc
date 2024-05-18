@@ -5,11 +5,14 @@ def inicializar_cache(tam_cache):
     return cache
 
 def imprimir_cache(cache):
-    print(f"{'Tamanho da Cache: ':<10} {len(cache):<10}")
-    print(f"{'Pos Cache':<10} | {'Pos Memória':<10}")
-    print("-" * 25)
+    print(f"{'Tamanho da Cache: ':<15} {len(cache):<15}")
+    print(f"{'Bloco':<15} | {'Pos Memória':<15}")
+    print("-" * 30)
     for posicao, valor in cache.items():
-        print(f"{posicao:>10} | {valor:>10}")
+        print(f"{posicao:<15} | {valor:<15}")
+    print()
+
+
 
 def mapeamento_direto(tam_cache, pos_memoria):
     cache = inicializar_cache(tam_cache)
@@ -44,6 +47,7 @@ def mapeamento_direto(tam_cache, pos_memoria):
 
 # mapeamento_direto(5, [33,3,11,5])     
 # mapeamento_direto(5, [0,1,2,3,4,5,6])     
-# mapeamento_direto(5, [0,1,2,2,22,32,42,20,1,10,11,12,13])     
+mapeamento_direto(4, [0,1,2,2,22,32,42,20,1,10,11,12,13])     
 # mapeamento_direto(5, [1,6,1,11,1,16,1,21,1,26])     
-mapeamento_direto(4, [3,7,11,15,3,19,11])   
+# mapeamento_direto(4, [3,7,11,15,3,19,11])   
+# mapeamento_direto(12, [0, 4, 8, 12, 16, 20, 24, 1, 5, 9, 13, 17])     
