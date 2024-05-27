@@ -1,7 +1,7 @@
-def inicializar_cache(tam_cache, num_blocos):
+def inicializar_cache(tam_cache, num_conj):
     cache = {}
-    for i in range(tam_cache // num_blocos):
-        cache[i] = [-1] * num_blocos  
+    for i in range(tam_cache // num_conj):
+        cache[i] = [-1] * num_conj  
     return cache
 
 def imprimir_cache(cache):
@@ -17,8 +17,8 @@ def atualizar_lru(lru, bloco):
         lru.remove(bloco)
     lru.append(bloco)
 
-def mapeamento_associativo_conjunto(tam_cache, num_blocos, pos_memoria):
-    cache = inicializar_cache(tam_cache, num_blocos)
+def mapeamento_associativo_conjunto(tam_cache, num_conj, pos_memoria):
+    cache = inicializar_cache(tam_cache, num_conj)
     lru = {i: [] for i in cache.keys()}
     
     print("Cache Inicial")
@@ -28,8 +28,8 @@ def mapeamento_associativo_conjunto(tam_cache, num_blocos, pos_memoria):
     misses = 0
 
     for i in range(len(pos_memoria)):
-        pos_conjunto = (pos_memoria[i] // num_blocos) % (tam_cache // num_blocos)
-        linha = pos_memoria[i] % num_blocos
+        pos_conjunto = (pos_memoria[i] // num_conj) % (tam_cache // num_conj)
+        linha = pos_memoria[i] % num_conj
 
         print(f"Linha {i} | Posição da memória desejada {pos_memoria[i]}")
 
@@ -61,7 +61,7 @@ def mapeamento_associativo_conjunto(tam_cache, num_blocos, pos_memoria):
 
 # mapeamento_associativo_conjunto(8, 2, [33,3,11,5])     
 # mapeamento_associativo_conjunto(4, 2, [0,1,2,3,4,5,6])     
-mapeamento_associativo_conjunto(4, 2, [0,1,2,2,22,32,42,20,1,10,11,12,13])     
+# mapeamento_associativo_conjunto(4, 2, [0,1,2,2,22,32,42,20,1,10,11,12,13])     
 # mapeamento_associativo_conjunto(10, 2, [0,1,2,2,22,32,42,20,1,10,11,12,13])    
 # mapeamento_associativo_conjunto(5, 1, [1,6,1,11,1,16,1,21,1,26])     
 # mapeamento_associativo_conjunto(4, 1, [3,7,11,15,3,19,11])   
