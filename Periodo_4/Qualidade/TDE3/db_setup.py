@@ -1,12 +1,9 @@
 import sqlite3
 
-# Conexão e criação do banco de dados
-conn = sqlite3.connect('nao_conformidades.db')
+conn = sqlite3.connect('nc_database.db')
 cursor = conn.cursor()
-
-# Criação da tabela de não-conformidades
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS nao_conformidades (
+CREATE TABLE IF NOT EXISTS nc_database (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     descricao TEXT NOT NULL,
     responsavel TEXT NOT NULL,
@@ -18,4 +15,3 @@ CREATE TABLE IF NOT EXISTS nao_conformidades (
 
 conn.commit()
 conn.close()
-print("Banco de dados e tabela criados com sucesso!")
