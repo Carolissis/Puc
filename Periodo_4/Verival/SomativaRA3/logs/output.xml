@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.11.3 on darwin)" generated="2024-10-23T21:34:49.781502" rpa="false" schemaversion="5">
+<suite id="s1" name="Formulario" source="/Users/carolineassis/Library/Mobile Documents/com~apple~CloudDocs/Vscode/Puc/Periodo_4/Verival/SomativaRA3/formulario.robot">
+<test id="s1-t1" name="C1 - Preencher todos os campos do formulario corretamente" line="14">
+<kw name="Entrar no site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:34:49.855325" level="INFO">Opening browser 'chrome' to base url 'https://visitor.r20.constantcontact.com/manage/optin?v=001nFupVrVrNd4UjGfZPy62KHBuj79961VKz4QWIP-7uVcCr1I-NMtOt3RO6gWporZprHQ_BuPjcMuMYXvwSb-6Qh_PdVoVxfJWRDbpNc02StM%3DLinks to an external site.'.</msg>
+<msg time="2024-10-23T21:34:49.935795" level="WARN">The chromedriver version (129.0.6668.91) detected in PATH at /Users/carolineassis/chromedriver-mac-x64/chromedriver might not be compatible with the detected chrome version (130.0.6723.60); currently, chromedriver 130.0.6723.69 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-23T21:34:49.855177" elapsed="11.202362"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-23T21:35:01.057888" elapsed="0.488231"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T21:35:04.547199" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T21:35:01.546286" elapsed="3.001540"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:04.704823" level="INFO">Current page contains text 'Se inscreva e fique atualizado!'.</msg>
+<arg>Se inscreva e fique atualizado!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-23T21:35:04.548781" elapsed="0.156114"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:34:49.854735" elapsed="14.850253"/>
+</kw>
+<kw name="Preencher todos os campos corretamente">
+<kw name="Preencher o campo &quot;${EMAIL}&quot; com o valor &quot;caroline@gmail.com&quot;" source_name="Preencher o campo &quot;${CAMPO}&quot; com o valor &quot;${VALOR}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:04.705859" level="INFO">Typing text 'caroline@gmail.com' into text field 'id=inputProp0'.</msg>
+<arg>${CAMPO}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:35:04.705599" elapsed="1.145119"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:04.705419" elapsed="1.145389"/>
+</kw>
+<kw name="Preencher o campo &quot;${NOME}&quot; com o valor &quot;Caroline Assis&quot;" source_name="Preencher o campo &quot;${CAMPO}&quot; com o valor &quot;${VALOR}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:05.851272" level="INFO">Typing text 'Caroline Assis' into text field 'id=inputProp1'.</msg>
+<arg>${CAMPO}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:35:05.851135" elapsed="0.450313"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:05.850934" elapsed="0.450631"/>
+</kw>
+<kw name="Preencher o campo &quot;${CARGO}&quot; com o valor &quot;Av. Silva Jardim 1234&quot;" source_name="Preencher o campo &quot;${CAMPO}&quot; com o valor &quot;${VALOR}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:06.302200" level="INFO">Typing text 'Av. Silva Jardim 1234' into text field 'id=inputProp2'.</msg>
+<arg>${CAMPO}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:35:06.302041" elapsed="0.198565"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:06.301741" elapsed="0.198952"/>
+</kw>
+<kw name="Preencher o campo &quot;${EMPRESA}&quot; com o valor &quot;EzRent&quot;" source_name="Preencher o campo &quot;${CAMPO}&quot; com o valor &quot;${VALOR}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:06.501164" level="INFO">Typing text 'EzRent' into text field 'id=inputProp3'.</msg>
+<arg>${CAMPO}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:35:06.501020" elapsed="0.189010"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:06.500813" elapsed="0.189309"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:06.942005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T21:35:06.690216" elapsed="0.251859"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:04.705202" elapsed="2.236939"/>
+</kw>
+<kw name="Clicar em enviar">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:06.942569" level="INFO">Clicking button 'id=update-profile-submit-btn'.</msg>
+<arg>${BT_SALVAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:35:06.942443" elapsed="3.364235"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:06.942285" elapsed="3.364483"/>
+</kw>
+<kw name="Verificar que o formulario foi enviado com sucesso">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:35:10.528955" level="INFO">Current page contains text 'Obrigado'.</msg>
+<arg>Obrigado</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-23T21:35:10.307127" elapsed="0.221896"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:35:10.306937" elapsed="0.222152"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:34:49.854332" elapsed="20.674877"/>
+</test>
+<status status="PASS" start="2024-10-23T21:34:49.782643" elapsed="20.746845"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Formulario">Formulario</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-23T21:34:49.935795" level="WARN">The chromedriver version (129.0.6668.91) detected in PATH at /Users/carolineassis/chromedriver-mac-x64/chromedriver might not be compatible with the detected chrome version (130.0.6723.60); currently, chromedriver 130.0.6723.69 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
